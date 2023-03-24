@@ -107,6 +107,7 @@ void pchar(stack_t **stack, unsigned int nline)
 	}
 	printf("%c\n", c);
 }
+
 /**
  * pstr - prints a str from ascii starting from the top
  * @stack: pointer to the head node pointer of stack
@@ -114,15 +115,17 @@ void pchar(stack_t **stack, unsigned int nline)
  * Return: Nothing.
  */
 void pstr(stack_t **stack, unsigned int nline)
+
 {
 	int idx = 0;
 	char res[] = "";
 	char c;
 	stack_t *temp;
-
 	temp = *stack;
 	(void)nline;
+	
 	/* starts at the top */
+
 	while (temp)
 	{
 		if (temp->n == 0)
