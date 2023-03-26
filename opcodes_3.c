@@ -6,11 +6,12 @@
  * @nline: the line number
  * Return: Nothing.
  */
+
 void rotl(stack_t **stack, unsigned int nline)
 {
 	stack_t *temp;
 	int hold_this, hold_this_again;
-	(void)nline;
+		(void)nline;
 
 	if (stack == NULL || *stack == NULL)
 	{
@@ -24,9 +25,10 @@ void rotl(stack_t **stack, unsigned int nline)
 	{
 		if (temp->next == NULL)
 			break;
+
 		temp = temp->next;
 	}
-
+	
 	hold_this_again = temp->n;
 	(*stack)->n = hold_this_again;
 	temp->n = hold_this;
